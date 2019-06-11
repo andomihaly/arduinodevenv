@@ -2,7 +2,7 @@
 
 static int t = 1;
 
-int main()
+int sum()
 {
     if (t)
         printf("on this line\n");
