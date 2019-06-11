@@ -1,27 +1,20 @@
-language: c
-sudo: false
-cache:
-  directories:
-    - ~/arduino_ide
-    - ~/.arduino15/packages/
-git:
-  depth: false
-  quiet: true
+language: cpp
+compiler: gcc
 
-addons:
-  apt:
-    packages:
-      - python3
-      - python3-pip
-      - python3-setuptools
+install:
+  # arduino
+  - sudo apt-get install arduino
+  # ino
+  - my_github=${PWD##*/}  
+  - cd ..
+  - git clone git://github.com/amperka/ino.git
+  - cd ino
+  - sudo make install
+  - sudo easy_install `cat requirements.txt`
+  - cd ..
+  - cd $my_github
 
-before_install:
-  - pip3 install --user adafruit-nrfutil
-  - source $TRAVIS_BUILD_DIR/install.sh
-script:
-  - build_platform uno
-
-notifications:
-  email:
-    on_success: change
-    on_failure: change
+script: 
+  - ino build
+  # Check if resulting file exists
+  - if [ -f .build/uno/firmware.hex ]; then return 0; else return 1; fi
