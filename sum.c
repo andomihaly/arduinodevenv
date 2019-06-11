@@ -9,5 +9,5 @@ int sum(int a, int b)
 
 int multiple(int a, int b)
 {
-     return ab;
+     return a*b;
 }
