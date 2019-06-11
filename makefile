@@ -1,2 +1,5 @@
-summake: sum.c
-    gcc -o summake sum.c -I.
+CC=gcc
+CFLAGS=-I.
+
+summake: sum.o
+     $(CC) -o summake sum.o
