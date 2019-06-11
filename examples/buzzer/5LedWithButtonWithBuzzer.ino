@@ -1,4 +1,4 @@
-﻿
+
 int BASE = 2 ;  // the I/O pin for the first LED
 int NUM = 5;   // number of LEDs
 int inpin=8;// initialize pin 7
