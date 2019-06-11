@@ -2,12 +2,7 @@
 
 static int t = 1;
 
-int sum()
+int sum(int a, int b)
 {
-    if (t)
-        printf("on this line\n");
-    else
-        printf("but not here\n");
-
-    return 0;
+     return a+b;
 }
