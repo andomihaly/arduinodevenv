@@ -1,4 +1,3 @@
-﻿
 int BASE = 2 ;  // the I/O pin for the first LED
 int NUM = 5;   // number of LEDs
 int inpin=8;// initialize pin 7
@@ -7,7 +6,7 @@ int val;// define val
 void setup()
 {
   Serial.begin(9600);
-  for (int i = BASE; i  BASE + NUM; i ++) 
+  for (int i = BASE; i <BASE + NUM; i ++) 
   {
     pinMode(i, OUTPUT);   // set I/O pins as output
   }
@@ -62,6 +61,5 @@ void ButtonTrigger()
       digitalWrite(currentLed, LOW);    // set I/O pins as “high”, turn on LEDs one by one
       
       counter++;
-   }  
-   
+   }
 }
