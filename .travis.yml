@@ -1,3 +1,6 @@
 language: c
 compiler: gcc
-script: make
+script: 
+	- make
+	# cppcheck
+	- cppcheck --quiet --error-exitcode=1 . 
