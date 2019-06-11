@@ -1,11 +1,4 @@
 language: c
 compiler: gcc
-
-addons:
-  apt:
-    packages:
-      - cppcheck
-      - make
-      - cmake
 script: 
 	- make
