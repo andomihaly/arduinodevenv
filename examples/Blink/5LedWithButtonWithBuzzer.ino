@@ -7,7 +7,7 @@ int val;// define val
 void setup()
 {
   Serial.begin(9600);
-  for (int i = BASE; i BASE + NUM; i ++) 
+  for (int i = BASE; i < BASE + NUM; i ++) 
   {
     pinMode(i, OUTPUT);   // set I/O pins as output
   }
